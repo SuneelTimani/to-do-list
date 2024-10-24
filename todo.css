@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: beige;
+    user-select: none;
+}
+h1{
+    height: 5vh;
+    margin: 3vh;
+}
+.container{
+    height: auto;
+    width: 60%;
+}
+#task{
+    height: 5vh;
+    width: 80%;
+    border-radius: 115px 0 0 115px;
+    border: solid 2px rgb(0, 0, 0);
+}
+#task:focus{
+    border-color: black;
+}
+#addbutton{
+    height: 40px;
+    width: 50px;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border: solid 2px #4169e1;
+    border-radius: 0 115px 115px 0;
+    transition: border-color 0.5s;
+}
+#addbutton:hover{
+    cursor: pointer;
+    border-color: black;
+    transition: border-color 0.5s;
+}
+.taskscontainer{
+    width: 60%;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+}
+.tasks{
+    background-color: white;
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    border-radius: inherit;
+    justify-content: space-between;
+}
+.taskPara{
+    width: 80%;
+    margin: 0 5px;
+    overflow: hidden;
+    font-weight: 600;
+}
+.taskPara:hover{
+    overflow-x: scroll;
+}
+.donebutton, .deletebutton{
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.25s;
+}
+.donebutton:hover, .deletebutton:hover{
+    background-color: rgb(205, 204, 204);
+    transition: background-color 0.25s;
+}
+.updatebutton{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: solid 2px black;
+    background-color: #ced8f4;
+}
+.check{
+    cursor: pointer;
+    margin: 5px;
+}
+@media all and (max-width: 500px){
+    .container{
+        width: 70%;
+    }
+    #task{
+        width: 90%;
+        border-radius: 115px;
+        border: solid 2px rgb(0, 0, 0);
+    }
+    #addbutton{
+        width: 90%;
+        border-radius: 115px;
+        margin-top: 5px;
+    }
+    .taskscontainer{
+        width: 80%;
+    }
+}
